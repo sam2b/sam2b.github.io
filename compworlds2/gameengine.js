@@ -95,7 +95,7 @@ GameEngine.prototype.update = function () {
     // Removes the entity, which means it will no longer render on the screen.
     for (var i = this.entities.length - 1; i >= 0; --i) {
         if (this.entities[i].removeFromWorld) {
-            console.debug("-----------------DEATH of [" + this.entities[i].x + "][" + this.entities[i].y + "]");
+            //console.debug("-----------------DEATH of [" + this.entities[i].x + "][" + this.entities[i].y + "]");
             this.entities.splice(i, 1);      // NOW REMOVED FROM THE SCREEN.
         }
     }

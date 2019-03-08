@@ -2,6 +2,7 @@
  * Author: Sam Brendel modified starter code example.
  * 3/14/2019, TCSS491 Computational Worlds
  * Game of Life
+ * https://sam2b.github.io/compworlds2/
  */
 
 var width;
@@ -497,15 +498,15 @@ Generation.prototype.checkAllCells = function () {
 
     for(var i = 0; i < this.deathQueue.length; i++) {
         this.cells[this.deathQueue[i].x][this.deathQueue[i].y] = dead;
-        console.debug("Queue Death of");
-        console.debug(this.deathQueue[i]);
+        ////console.debug("Queue Death of");
+        ////console.debug(this.deathQueue[i]);
     }
     this.deathQueue = [];
 
     for(var i = 0; i < this.birthQueue.length; i++) {
         this.cells[this.birthQueue[i].x][this.birthQueue[i].y] = alive;
-        console.debug("Queue Birth of");
-        console.debug(this.birthQueue[i]);
+        ////console.debug("Queue Birth of");
+        //console.debug(this.birthQueue[i]);
     }
     this.birthQueue = [];
 
