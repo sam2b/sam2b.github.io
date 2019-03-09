@@ -23,7 +23,7 @@ function setInitialState() {
     createPulsar(10, 40);
     createPulsar(5, 120);
     createPentadecathlon(5, 11);
-    createGosperGliderGun(20, 180);
+    createGosperGliderGun(150, 90);
     createSingleRowInfinity(20, 100);
 }
 
