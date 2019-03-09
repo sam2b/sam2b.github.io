@@ -1,14 +1,43 @@
-﻿
+﻿<!--
+ Author: Sam Brendel modified starter code example.
+ 3/8/2019, TCSS491 Computational Worlds, Professor Chris Marriott
+ Conway's Game of Life
+ https://sam2b.github.io/compworlds2/
+ Notes: [] Frame rate optimized from reducing memory consumption by
+           not drawing a rectangle if it already alive.
+        [] Interactive with the mouse to add/remove blocks so you
+           can play with various configurations.
+ Credits: John Conway, https://en.wikipedia.org/wiki/Game_of_life
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Game Project Shell</title>
-    <script type="text/javascript" src="./gameengine.js"></script>
-    <script type="text/javascript" src="./assetmanager.js"></script>
-    <script type="text/javascript" src="./main.js"></script>
+    <title>Sam Brendel Life</title>
+    <script type="text/javascript" src="Timer.js"></script>
+    <script type="text/javascript" src="gameengine.js"></script>
+    <script type="text/javascript" src="assetmanager.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="Entity.js"></script>
+    <script type="text/javascript" src="Unit.js"></script>
+    <script type="text/javascript" src="Background.js"></script>
+    <script type="text/javascript" src="Generation.js"></script>
 </head>
 <body>
-    <canvas id="gameWorld" tabindex="1" width="800" height="800" style="border: 1px solid brown; background: lightskyblue"></canvas>
+    <button id="start-life" onclick="startLife()">Push to Start</button>
+
+    <button id="step-life" onclick="step()">STEP FORWARD</button>
+
+    <!--
+    <select name="menuselection" onchange="menuSelection(this.value)">
+        <option value="----------------">Choose Selection</option>
+        <option value="Pulsar">Pulsar</option>
+        <option value="Blinker">Blinker</option>
+    </select>
+    -->
+
+    <br>
+    <canvas id="gameWorld" tabindex="1" width="800" height="800" style="border: 1px solid black; background: red"></canvas>
 </body>
 </html>
