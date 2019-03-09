@@ -1,12 +1,15 @@
 /*
- * Author: Sam Brendel
+ * Author: Sam Brendel modified starter code example.
  * 3/8/2019, TCSS491 Computational Worlds, Professor Chris Marriott
  * Conway's Game of Life
  * https://sam2b.github.io/compworlds2/
- * Notes: [] Frame rate optimized from reducing memory consumption by
- *           not drawing a rectangle if it already alive.
+ *
+ * Notes: [] Best performance with FireFox browser.
  *        [] Interactive with the mouse to add/remove blocks so you
  *           can play with various configurations.
+ *        [] Resolution can be set in main.js (pixel dimensions)
+ *        [] Frame rate optimized from reducing memory consumption by
+ *           not drawing a rectangle if it already alive.
  * Credits: John Conway, https://en.wikipedia.org/wiki/Game_of_life
  */
 

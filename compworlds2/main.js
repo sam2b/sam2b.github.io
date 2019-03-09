@@ -5,10 +5,11 @@
  * https://sam2b.github.io/compworlds2/
  *
  * Notes: [] Best performance with FireFox browser.
- *        [] Frame rate optimized from reducing memory consumption by
- *           not drawing a rectangle if it already alive.
  *        [] Interactive with the mouse to add/remove blocks so you
  *           can play with various configurations.
+ *        [] Resolution can be set in main.js (pixel dimensions)
+ *        [] Frame rate optimized from reducing memory consumption by
+ *           not drawing a rectangle if it already alive.
  * Credits: John Conway, https://en.wikipedia.org/wiki/Game_of_life
  */
 
