@@ -17,7 +17,7 @@ var width;
 var height;
 const ASSET_MANAGER = new AssetManager();
 const GAME_ENGINE = new GameEngine();
-const resolution = 4;
+var resolution = 4;
 
 function setInitialState() {
     createBlinker(30, 10);
