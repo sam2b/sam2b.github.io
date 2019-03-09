@@ -3,7 +3,9 @@
  * 3/8/2019, TCSS491 Computational Worlds, Professor Chris Marriott
  * Conway's Game of Life
  * https://sam2b.github.io/compworlds2/
- * Notes: [] Frame rate optimized from reducing memory consumption by
+ *
+ * Notes: [] Best performance with FireFox browser.
+ *        [] Frame rate optimized from reducing memory consumption by
  *           not drawing a rectangle if it already alive.
  *        [] Interactive with the mouse to add/remove blocks so you
  *           can play with various configurations.
