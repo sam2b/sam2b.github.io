@@ -3,6 +3,7 @@
  * Augmented by: Sam Brendel 
  * Demonstration of character movement in a game world.
  * 2019-02-01
+ * https://sam2b.github.io/DemoGameCharacter
  */
 
 // This game shell was happily copied from Googler Seth Ladd's "Bad Aliens" game and his Google IO talk in 2011

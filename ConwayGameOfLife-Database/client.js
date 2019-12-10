@@ -2,7 +2,7 @@
  * Author: Sam Brendel modified starter code example.
  * 3/8/2019, TCSS491 Computational Worlds, Professor Chris Marriott
  * Conway's Game of Life (save/load from database)
- * https://sam2b.github.io/compworlds3
+ * https://sam2b.github.io/ConwayGameOfLife-Database
  */
  
 var socket = io.connect("http://24.16.255.56:8888"); //24.16.255.56  // The database server.

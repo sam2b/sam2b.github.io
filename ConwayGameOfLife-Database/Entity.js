@@ -2,7 +2,7 @@
  * Author: Sam Brendel modified starter code example.
  * 3/8/2019, TCSS491 Computational Worlds, Professor Chris Marriott
  * Conway's Game of Life (save/load from database)
- * https://sam2b.github.io/compworlds3
+ * https://sam2b.github.io/ConwayGameOfLife-Database
  *
  *
  * Notes: [] Best performance with FireFox browser.

@@ -2,6 +2,7 @@
  * Assignment 1, Computational Worlds
  * Augmented by: Sam Brendel
  * 2019-02-01
+ * https://sam2b.github.io/DemoGameCharacter
  * Mouse click invokes attack animation.
  * Keyboard space bar invokes jump.
  * Keyboard arrow keys or W,A,S,D invokes movement.
