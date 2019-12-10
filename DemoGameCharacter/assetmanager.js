@@ -1,8 +1,3 @@
-/* Author: Sam Brendel modified starter code example.
- * 3/8/2019, TCSS491 Computational Worlds, Professor Chris Marriott
- * Conway's Game of Life
- * https://sam2b.github.io/compworlds2/
- */
 function AssetManager() {
     this.successCount = 0;
     this.errorCount = 0;
@@ -11,7 +6,7 @@ function AssetManager() {
 }
 
 AssetManager.prototype.queueDownload = function (path) {
-    //console.log("Queueing " + path);
+    console.log("Queueing " + path);
     this.downloadQueue.push(path);
 }
 
@@ -25,10 +20,10 @@ AssetManager.prototype.downloadAll = function (callback) {
         var that = this;
 
         var path = this.downloadQueue[i];
-        //console.log(path);
+        console.log(path);
 
         img.addEventListener("load", function () {
-            //console.log("Loaded " + this.src);
+            console.log("Loaded " + this.src);
             that.successCount++;
             if(that.isDone()) callback();
         });

@@ -1,10 +1,8 @@
 /*
-/*
  * Author: Sam Brendel modified starter code example.
  * 3/8/2019, TCSS491 Computational Worlds, Professor Chris Marriott
- * Conway's Game of Life (save/load from database)
- * https://sam2b.github.io/compworlds3
- *
+ * Conway's Game of Life
+ * https://sam2b.github.io/compworlds2/
  *
  * Notes: [] Best performance with FireFox browser.
  *        [] Interactive with the mouse to add/remove blocks so you
@@ -21,23 +19,15 @@ const ASSET_MANAGER = new AssetManager();
 const GAME_ENGINE = new GameEngine();
 var resolution = 4;
 
-function clearBoard() {
-    for(var i=0; i<height; i++) {
-        for(var j=0; j<width; j++) {
-            GAME_ENGINE.generation.remove(i, j);
-        }
-    }
-}
-
 function setInitialState() {
-    //createBlinker(30, 10);
-    //createToad(50, 10);
-    //createBeacon(40, 10);
-    //createPulsar(10, 40);
-    //createPulsar(5, 120);
+    createBlinker(30, 10);
+    createToad(50, 10);
+    createBeacon(40, 10);
+    createPulsar(10, 40);
+    createPulsar(5, 120);
     createPentadecathlon(5, 11);
-    //createGosperGliderGun(150, 90);
-    //createSingleRowInfinity(20, 100);
+    createGosperGliderGun(150, 90);
+    createSingleRowInfinity(20, 100);
 }
 
 function createBlinker(x, y) {
@@ -107,7 +97,7 @@ function initialize(game) {
     for (let y = 0; y < height; y++) {
         var row = [];
         for (let x = 0; x < width; x++) {
-            row.push(0); // dead
+            row.push[0]; // dead
         }
         game.generation.cells.push(row);
     }
@@ -118,7 +108,7 @@ function initialize(game) {
 ASSET_MANAGER.queueDownload("./img/unit.png");
 
 ASSET_MANAGER.downloadAll(function () {
-    console.log("starting up my sheild");
+    console.log("starting up da sheild");
     var canvas = document.getElementById('gameWorld');
     var ctx = canvas.getContext('2d');
     width = canvas.width;
@@ -134,20 +124,15 @@ ASSET_MANAGER.downloadAll(function () {
     GAME_ENGINE.start();
 });
 
+
 // the "main" code begins here /////////////////////////////////////////
 function startLife() {
     if (GAME_ENGINE.paused) {
         GAME_ENGINE.paused = false;
         document.getElementById('start-life').innerHTML  = "PAUSE";
-        document.getElementById('save-life').disabled = true;
-        document.getElementById('load-life').disabled = true;
-        document.getElementById('step-life').disabled = true;
     } else {
         GAME_ENGINE.paused = true;
         document.getElementById('start-life').innerHTML  = "RESUME";
-        document.getElementById('save-life').disabled = false;
-        document.getElementById('load-life').disabled = false;
-        document.getElementById('step-life').disabled = false;
     }
     //console.debug("engine " + GAME_ENGINE.paused);
 }
@@ -157,39 +142,6 @@ function step() {
         GAME_ENGINE.paused = false;
         GAME_ENGINE.generation.checkAllCells();
         GAME_ENGINE.paused = true;
-        document.getElementById('save-life').disabled = false;
-        document.getElementById('load-life').disabled = false;
-    }
-}
-
-function save() {
-    if (GAME_ENGINE.paused) {
-        // store the state of all 160,000 entities to json and push to database.
-        // Then display confirmation dialog.
-        document.getElementById('save-life').disabled = true;
-        document.getElementById('load-life').disabled = false;
-        var theData = [];
-        var row = [];
-        for(var i=0; i<height; i++) {
-            row = [];
-            for(var j=0; j<width; j++) {
-                row.push({ x:j, y:i, state:GAME_ENGINE.generation.cells[i][j] });
-            }
-            theData.push(row);
-        }
-
-        console.log("Sent data to server.");
-        //console.log(theData);
-        socket.emit("save", { studentname: STUD_NAME, statename: STATE_NAME, data: theData });
-    }
-}
-
-function load() {
-    if (GAME_ENGINE.paused) {
-        // retreive the state of all 160,000 entities to json and push to database.
-        // Then display confirmation dialog.
-        document.getElementById('save-life').disabled = true;
-        socket.emit("load", { studentname: STUD_NAME, statename: STATE_NAME});
     }
 }
 

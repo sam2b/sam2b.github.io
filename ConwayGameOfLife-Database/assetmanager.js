@@ -1,8 +1,3 @@
-/* Author: Sam Brendel modified starter code example.
- * 3/8/2019, TCSS491 Computational Worlds, Professor Chris Marriott
- * Conway's Game of Life
- * https://sam2b.github.io/compworlds2/
- */
 function AssetManager() {
     this.successCount = 0;
     this.errorCount = 0;
